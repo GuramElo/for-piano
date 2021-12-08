@@ -1,0 +1,59 @@
+body{
+    margin:0;
+    padding: 0;
+background-color: brown;
+position: relative;
+@extend html;
+}
+html{
+    width:100%;
+    height:100%;
+}
+
+section {
+    position: absolute;
+display: flex;
+top:0%;
+left:50%;
+transform: translateX(-50%);
+box-sizing: content-box;
+width:auto;
+height:500px;
+column-gap: 2px;
+
+&>div {
+height:100%;
+width:100px;
+background-color: white;
+
+position: relative;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+}
+
+.bb.bb.bb{
+position:absolute;
+width:50px;
+height:70%;
+top:0%;
+right:0%;
+transform: translateX(50%);
+z-index: 10;
+background-color: black;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+transform: translateX(-50%);
+
+&#b{
+
+    @for $a from 1 through 5{
+        
+        &#{$a}{
+            @if $a>2 {$a:$a+1;}
+            left:102*$a+px;
+        }
+    }
+    }
+}
